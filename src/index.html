@@ -1,13 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
+
   <head>
     <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./styles/main.scss">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma-rtl.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <script src="app.js" defer></script>
+    <title>Document</title>
+
   </head>
+
   <body>
-    <h1>Hello Mate Academy</h1>
-    <script type="text/javascript" src="scripts/main.js"></script>
+    <section class="notesapp">
+      <header class="header">
+        <form class="add-note-form">
+          <input
+            type="text"
+            required
+            placeholder="Name the note"
+            class="new-name"
+          >
+          <select required class="new-category">
+            <option
+              disabled
+              selected
+            >
+              Choose category
+            </option>
+            <option value="Random Thought">Random Thought</option>
+            <option value="Idea">Idea</option>
+            <option value="Task">Task</option>
+          </select>
+          >
+          <input
+            type="text"
+            required
+            placeholder="Content"
+            class="new-content"
+          >
+          <button
+            type="submit"
+            name="button"
+            class="add-button"
+          >
+            Add note
+          </button>
+        </form>
+
+      </header>
+
+      <main class="main">
+        <table class="table is-striped">
+          <thead>
+            <th class="table-column table-column-icon"></th>
+            <th class="table-column table-column-title">Name</th>
+            <th class="table-column table-column-created">Created</th>
+            <th class="table-column table-column-category">Category</th>
+            <th class="table-column table-column-content">Content</th>
+            <th class="table-column table-column-dates">Dates</th>
+            <th class="table-column table-column-icons"></th>
+            <th class="table-column table-column-icons">
+              <div class="table-icon-cell header-icon-archive">
+                <img src="./icons/arc.png" alt="archive all">
+              </div>
+            </th>
+            <th class="table-column table-column-icons">
+              <div class="table-icon-cell header-icon-delete">
+                <img src="./icons/bin.png" alt="delete all">
+              </div>
+            </th>
+          </thead>
+
+          <tbody class="table-body">
+          </tbody>
+        </table>
+      </main>
+
+      <footer class="footer">
+        <h2>
+          Summary table
+        </h2>
+      </footer>
+    </section>
   </body>
+
 </html>
